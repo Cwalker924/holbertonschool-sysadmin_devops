@@ -1,3 +1,2 @@
-Shell Basics
-
-Using different commands to manipulate files in the terminal
+0x00Shell Basics
+0x01Shell Permissions
