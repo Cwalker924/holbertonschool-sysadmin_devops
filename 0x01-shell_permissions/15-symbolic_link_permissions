@@ -1,2 +1,2 @@
 #!/bin/bash
-chown --dereference betty:holerton _hello
+chown -hR --dereference betty:holerton _hello
