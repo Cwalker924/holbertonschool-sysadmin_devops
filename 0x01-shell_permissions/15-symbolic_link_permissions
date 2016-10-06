@@ -1,2 +1,2 @@
 #!/bin/bash
-chown betty[:holerton] _hello
+chown -h betty:holerton _hello
