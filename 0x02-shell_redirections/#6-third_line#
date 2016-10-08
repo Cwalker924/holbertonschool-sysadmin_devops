@@ -1,3 +1,0 @@
-#!/bin/bash
-head -n +3 /tmp/TESTER |tail -n 1
-grep -x ^+3$
