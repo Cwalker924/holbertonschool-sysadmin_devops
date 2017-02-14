@@ -1,0 +1,15 @@
+#!/usr/bin/env bash
+# This script is displaying "Holberton School" 10 times on 9th iteration
+# display "Hi"
+# MUST USE: "while loop" and "if statement"
+
+((i = 0))
+while ((i < 10));
+do
+    if ((i == 9));
+    then
+	echo "Hi";
+    else
+	echo "Holberton School"; fi
+    ((i++))
+done
