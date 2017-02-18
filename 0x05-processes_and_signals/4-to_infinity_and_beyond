@@ -1,4 +1,5 @@
 #!/usr/bin/env bash
+echo $$
 ((i=1))
 while ((i));
 do
