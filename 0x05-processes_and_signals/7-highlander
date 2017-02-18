@@ -1,5 +1,5 @@
 #!/usr/bin/env bash
-# Loop that cant be killed using SIGINT
+# Loop that cant be killed using SIGTERM
 trap "echo 'I am invincible!!!'" SIGTERM
 ((i=1))
 while ((i));
