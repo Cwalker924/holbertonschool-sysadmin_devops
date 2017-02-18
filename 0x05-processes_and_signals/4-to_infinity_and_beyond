@@ -1,5 +1,5 @@
 #!/usr/bin/env bash
-echo $$
+# Infinite loop that displays "To infinity and beyond" with a 2 second sleep cycle
 ((i=1))
 while ((i));
 do

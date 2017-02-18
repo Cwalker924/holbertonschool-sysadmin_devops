@@ -1,3 +1,0 @@
-#!/usr/bin/env bash
-ps -eF | grep -c
-# shellcheck disable=SC2009

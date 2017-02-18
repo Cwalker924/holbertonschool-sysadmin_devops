@@ -1,3 +1,4 @@
 #!/usr/bin/env bash
-ps -eF | grep -w bash
+# Bash script that displays line containinh bash word
 # shellcheck disable=SC2009
+ps -eF | grep -w bash
