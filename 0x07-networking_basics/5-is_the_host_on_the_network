@@ -1,0 +1,10 @@
+#!/usr/bin/env bash
+#Usage: 5-is_the_host_on_the_network {IP_ADDRESS}
+
+port="$1"
+
+if [ $port ]; then
+    ping $port
+else
+    echo "Usage: 5-is_the_host_on_the_network {IP_ADDRESS}"
+fi
