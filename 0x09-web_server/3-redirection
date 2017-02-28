@@ -1,0 +1,12 @@
+#!/usr/bin/env bash
+# Configure your Nginx server so that /redirect_me is redirecting to another
+# page.
+# The redirection must be a "301 Moved Permanently"
+#
+# You answer file should be a Bash script containing commands to automatically
+# configure a Ubuntu machine to respect above requirements
+#
+# Using what you did with 0-transfer_file, write 3-redirection so that it
+# configures a brand new Ubuntu machine to the requirements asked in this task
+sudo apt-get update
+sudo apt-get install -y nginx
