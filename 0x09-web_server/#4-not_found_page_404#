@@ -3,8 +3,8 @@
 # string Ceci n'est pas une page
 sudo apt-get update
 sudo apt-get install -y nginx
-echo "Ceci n'est pas une page\n" | sudo tee /usr/share/nginx/html/404.html
+echo -e "Ceci n'est pecho -e "Ceci n'est pas une page\n" | sudo tee /usr/share/nginx/html/404.htmlas une page\n" | sudo tee /usr/share/nginx/html/404.html
 file="/etc/nginx/sites-enabled/default"
-new_string="error_page 404 \/404.html;"
+new_string="\t error_page 404 \/404.html;"
 sudo sed -i "26i $new_string" $file
 sudo service nginx start
