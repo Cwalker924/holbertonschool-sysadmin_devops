@@ -1,0 +1,1 @@
+sudo wget "https://collectors.us2.sumologic.com/rest/download/linux/64" -O SumoCollector.sh && sudo chmod +x SumoCollector.sh && sudo ./SumoCollector.sh -q -Vsumo.token_and_url=N0d6a2NrOW82YlJDMWFhU1pBNDlMY01NUlBlb3J6RGhodHRwczovL2NvbGxlY3RvcnMudXMyLnN1bW9sb2dpYy5jb20=
