@@ -1,0 +1,2 @@
+0-mysql_configuration_master
+0-mysql_configuration_slave
