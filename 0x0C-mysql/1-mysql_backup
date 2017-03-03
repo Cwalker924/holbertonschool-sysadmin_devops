@@ -1,4 +1,4 @@
 #!/usr/bin/env bash
 # Creates a backup for MySQL DB
 mysqldump -uroot -p"$1" --all-databases > backup.sql
-tar -cf "$(date '+%d-%m-%Y').tar.gz" backup.sql
+tar -cfvz "$(date +'%d-%m-%Y').tar.gz" backup.sql
