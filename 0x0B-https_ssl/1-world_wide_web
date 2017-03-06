@@ -5,10 +5,10 @@ SUBDOMAIN=$2
 FILE=answer_sec.txt
 
 {
-dig www.$1 | grep -A1 'ANSWER SECTION:'
-dig lb-01.$1 | grep -A1 'ANSWER SECTION:'
-dig web-01.$1 | grep -A1 'ANSWER SECTION:'
-dig web-02.$1 | grep -A1 'ANSWER SECTION:'
+dig www."$DOMAIN" | grep -A1 'ANSWER SECTION:'
+dig lb-01."$DOMAIN" | grep -A1 'ANSWER SECTION:'
+dig web-01."$DOMAIN" | grep -A1 'ANSWER SECTION:'
+dig web-02."$DOMAIN" | grep -A1 'ANSWER SECTION:'
 } > $FILE
 
 if [[ -n $2 ]]
