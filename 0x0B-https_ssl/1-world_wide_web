@@ -13,10 +13,12 @@ dig web-02.whoneeds.space | grep -A1 'ANSWER SECTION:'
 DOMAIN=$1
 SUBDOMAIN=$2
 
-if [$2 -eq null]
+if [[ -n $2 ]]
 then
+    awk '/$2/ {print "The subdomain "$2" is a "$4" record and points to "$5;}' $FILE
+else
     awk '/www/ {print "The subdomain www is a "$4" record and points to "$5;}' $FILE
-    awk '/lb-01/ {print"The subdomain lb-01 is a "$4" record and points to "$5;}' $FILE
-    awk '/web-01/ {print"The subdomain web-01 is a "$4" record and points to "$5;}' $FILE
-    awk '/web-02/ {print"The subdomain web-02 is a "$4" record and points to "$5;}' $FILE
+    awk '/lb-01/ {print "The subdomain lb-01 is a "$4" record and points to "$5;}' $FILE
+    awk '/web-01/ {print "The subdomain web-01 is a "$4" record and points to "$5;}' $FILE
+    awk '/web-02/ {print "The subdomain web-02 is a "$4" record and points to "$5;}' $FILE
 fi
