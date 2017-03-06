@@ -1,21 +1,19 @@
 #!/usr/bin/env bash
-# Configures domain zone to point all domain query to lb-01
-
+# a Bash script that will display information about subdomains.
+DOMAIN=$1
+SUBDOMAIN=$2
 FILE=answer_sec.txt
 
 {
-dig www.whoneeds.space | grep -A1 'ANSWER SECTION:'
-dig lb-01.whoneeds.space | grep -A1 'ANSWER SECTION:'
-dig web-01.whoneeds.space | grep -A1 'ANSWER SECTION:'
-dig web-02.whoneeds.space | grep -A1 'ANSWER SECTION:'
+dig www.$1 | grep -A1 'ANSWER SECTION:'
+dig lb-01.$1 | grep -A1 'ANSWER SECTION:'
+dig web-01.$1 | grep -A1 'ANSWER SECTION:'
+dig web-02.$1 | grep -A1 'ANSWER SECTION:'
 } > $FILE
-
-DOMAIN=$1
-SUBDOMAIN=$2
 
 if [[ -n $2 ]]
 then
-    awk '/$2/ {print "The subdomain "$2" is a "$4" record and points to "$5;}' $FILE
+    awk -v var="$SUBDOMAIN" "/$SUBDOMAIN/"'{print "The subdomain "var" is a "$4" record and points to "$5;}' $FILE
 else
     awk '/www/ {print "The subdomain www is a "$4" record and points to "$5;}' $FILE
     awk '/lb-01/ {print "The subdomain lb-01 is a "$4" record and points to "$5;}' $FILE
