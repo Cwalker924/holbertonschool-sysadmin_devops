@@ -1,0 +1,8 @@
+;; ANSWER SECTION:
+www.whoneeds.space.	1800	IN	A	107.23.247.174
+;; ANSWER SECTION:
+lb-01.whoneeds.space.	1800	IN	A	107.23.247.174
+;; ANSWER SECTION:
+web-01.whoneeds.space.	1079	IN	A	52.206.143.134
+;; ANSWER SECTION:
+web-02.whoneeds.space.	1474	IN	A	54.90.169.222
