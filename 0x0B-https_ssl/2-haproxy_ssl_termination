@@ -36,15 +36,6 @@ defaults
 	errorfile 503 /etc/haproxy/errors/503.http
 	errorfile 504 /etc/haproxy/errors/504.http
 
-#listen appname 0.0.0.0:80
-#	mode http
-#	stats enable
-#	balance roundrobin
-#	option httpclose
-#	option forwardfor
-#	server 93-web-01 52.206.143.134:80
-#	server 93-web-02 54.90.169.222:80
-
 frontend www-http
    bind *:80
    reqadd X-Forwarded-Proto:\ http
