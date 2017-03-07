@@ -1,0 +1,9 @@
+#!/usr/bin/env bash
+# Fix this container so that Nginx is running as the nginx user
+
+# stops service
+service apache2 stop
+
+# kills process
+pkill apache2
+

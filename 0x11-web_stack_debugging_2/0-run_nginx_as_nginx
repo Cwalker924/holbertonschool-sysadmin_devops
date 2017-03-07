@@ -1,0 +1,13 @@
+#!/usr/bin/env bash
+# Fix this container so that Nginx is running as the nginx user
+
+# stops service
+service apache2 stop
+
+# kills process
+pkill apache2
+
+sed -i 's/www-data/nginx/' /etc/nginx/nginx.conf
+sed -i 's/8000/8080/g' /etc/nginx/sites-enabled/default
+
+service nginx restart
