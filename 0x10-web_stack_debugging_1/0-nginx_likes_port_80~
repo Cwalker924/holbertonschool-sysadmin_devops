@@ -1,0 +1,5 @@
+#!/usr/bin/env bash
+# changed all enable ports from 8080 to 80
+
+sed -i 's/8080/80g' /etc/nginx/site-enable/default
+service nginx retart

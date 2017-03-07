@@ -1,0 +1,5 @@
+#!/usr/bin/env bash
+# changed all enable ports to listen to 80 to from 8080
+
+sed -i 's/8080/80/g' /etc/nginx/sites-enabled/default
+service nginx retart
