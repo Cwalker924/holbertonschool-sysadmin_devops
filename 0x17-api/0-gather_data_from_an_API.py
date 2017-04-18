@@ -22,4 +22,7 @@ if __name__ == "__main__":
         print("Employee {} is done with tasks({}/{}):"
               .format(name, len(comp), len(todo)))
         for task in comp:
-                print("\t{}".format(task))
+                try:
+                        print("\t {}".format(task))
+                except:
+                        pass
