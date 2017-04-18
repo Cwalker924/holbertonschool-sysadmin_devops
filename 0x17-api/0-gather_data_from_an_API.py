@@ -9,7 +9,6 @@ import sys
 
 
 if __name__ == "__main__":
-        base_url = "https://jsonplaceholder.typicode.com"
         if len(sys.argv) > 1:
             try:
                 url = "https://jsonplaceholder.typicode.com"
