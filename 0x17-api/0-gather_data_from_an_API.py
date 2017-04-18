@@ -3,6 +3,7 @@
 a Python script that, using this REST API, for a given employee ID, returns
 information about his/her TODO list progress.
 """
+import json
 import requests
 import sys
 
@@ -18,7 +19,7 @@ if __name__ == "__main__":
         for jobs in todo:
                 if jobs.get("completed") is True:
                         comp.append(jobs.get("title"))
-        print("Employee {} is done with tasks({}/{}):"
+        print("Employee {} is done with tasks({:d}/{:d}):"
               .format(name, len(comp), len(todo)))
         for task in comp:
                 try:
