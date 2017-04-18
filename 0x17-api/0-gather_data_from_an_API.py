@@ -27,7 +27,7 @@ def user_info(uid):
     print("Employee {} is done with tasks({}/{}):"
           .format(name, len(comp), len(todo)))
     for task in comp:
-        print("\t{}".format(task))
+        print("\t {}".format(task))
 
 if __name__ == "__main__":
     if len(sys.argv) > 1:
